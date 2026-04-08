@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TiuSam - YouTube Followers Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1 class="logo-text">TiuSam</h1>
+                    <p class="tagline">Pokemon TCG Expert</p>
+                </div>
+                <p class="description">Pergunte qualquer coisa sobre Pokemon TCG</p>
+            </div>
+        </header>
+
+        <!-- Chat Container -->
+        <main class="chat-container">
+            <div class="messages" id="messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>E aí, é o TiuSam aqui! 👋</p>
+                        <p>Quer saber sobre Pokémon TCG? Tô aqui pra responder qualquer dúvida do meu canal. Manda aí!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-area">
+                <form id="chatForm" class="chat-form">
+                    <input
+                        type="text"
+                        id="userInput"
+                        class="input-field"
+                        placeholder="Digite sua pergunta..."
+                        autocomplete="off"
+                        disabled
+                    >
+                    <button type="submit" class="send-btn" id="sendBtn" disabled>
+                        <span>Enviar</span>
+                    </button>
+                </form>
+                <p class="loading-text" id="loadingText" style="display: none;">
+                    <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by Claude AI | TiuSam © 2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
