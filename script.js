@@ -47,30 +47,22 @@ chatForm.addEventListener('submit', async (e) => {
             body: JSON.stringify({ message }),
         });
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            console.error('❌ API error response:', {
-                status: response.status,
-                statusText: response.statusText,
-                data: errorData,
-            });
-            throw new Error(`HTTP ${response.status}: ${errorData.error || response.statusText}`);
+        const data = await response.json();
+
+        // Tanto sucesso quanto erros da API trazem .response com mensagem amigavel
+        if (data.response) {
+            addMessageToChat(data.response, 'bot');
+        } else if (!response.ok) {
+            console.error('❌ API error:', { status: response.status, data });
+            addMessageToChat('Eita, deu um problema aqui! Tenta de novo em uns instantes! 🛠️', 'bot');
+        } else {
+            addMessageToChat('Recebi uma resposta vazia, estranho! Tenta de novo!', 'bot');
         }
 
-        const data = await response.json();
-        console.log('✅ API response received:', data);
-
-        // Add bot response to chat
-        addMessageToChat(data.response, 'bot');
-
     } catch (error) {
-        console.error('❌ Error details:', {
-            message: error.message,
-            stack: error.stack,
-            error: error,
-        });
+        console.error('❌ Network error:', error);
         addMessageToChat(
-            'Desculpa, tive um problema aqui! Tenta de novo em um instante. (Verifica o console do navegador pra mais detalhes)',
+            'Não consegui me conectar agora, irmão! Verifica sua internet e tenta de novo. 📡',
             'bot'
         );
     } finally {
