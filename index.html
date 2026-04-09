@@ -3,82 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TiuSam - Chat IA</title>
+    <title>TiuSam - Pergunte ao Tiu!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div class="top-bar-content">
-                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="50" cy="50" r="45" fill="none" stroke="#ffcc00" stroke-width="3"/>
-                    <circle cx="50" cy="50" r="35" fill="#ff6600" opacity="0.1"/>
-                    <text x="50" y="60" font-size="40" font-weight="bold" text-anchor="middle" fill="#ffcc00">⚡</text>
-                </svg>
-                <span class="top-bar-text">TiuSam - Chat IA</span>
-            </div>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="#" class="logo-link">
+                <img src="logo.png" alt="TiuSam" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                <span class="logo-fallback">TiuSam</span>
+            </a>
+            <nav class="main-nav">
+                <a href="#chat">CHAT IA</a>
+                <a href="https://www.youtube.com/@TiuSam" target="_blank">YOUTUBE</a>
+                <a href="https://www.brofistloja.com.br/" target="_blank">LOJA</a>
+            </nav>
         </div>
+    </header>
 
-        <!-- Hero Section -->
-        <header class="hero">
-            <div class="hero-content">
-                <svg class="logo-main" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
-                    <!-- TiuSam Text with Comic Style -->
-                    <defs>
-                        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#ffcc00;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#ff6600;stop-opacity:1" />
-                        </linearGradient>
-                        <filter id="shadow">
-                            <feDropShadow dx="3" dy="3" stdDeviation="2" flood-opacity="0.5"/>
-                        </filter>
-                    </defs>
-                    <text x="250" y="110" font-size="90" font-weight="900" text-anchor="middle" fill="url(#textGradient)" filter="url(#shadow)" style="font-family: Arial, sans-serif; letter-spacing: 2px;">TiuSam</text>
-                    <circle cx="480" cy="30" r="15" fill="#ffcc00"/>
-                </svg>
-                <p class="hero-subtitle">Responda qualquer coisa sobre Pokemon TCG 🔥</p>
-            </div>
-        </header>
+    <!-- HERO BANNER -->
+    <section class="hero-banner">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">PERGUNTE AO <span class="highlight">TIU!</span></h1>
+            <p class="hero-sub">Chat com IA treinada pra responder como o TiuSam ⚡</p>
+        </div>
+    </section>
 
-        <!-- Chat Container -->
-        <main class="chat-container">
-            <!-- Messages -->
-            <div class="messages" id="messages">
-                <div class="message bot-message">
-                    <div class="message-content">
-                        <p>E aí! 👋 É o TiuSam aqui!</p>
-                        <p>Quer saber sobre Pokémon TCG? Manda sua pergunta que eu respondo!</p>
+    <!-- CHAT SECTION -->
+    <main class="chat-section" id="chat">
+        <div class="chat-wrapper">
+            <!-- AVATAR LATERAL -->
+            <aside class="avatar-panel">
+                <div class="avatar-container">
+                    <svg class="avatar-svg" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Cabelo de trás -->
+                        <ellipse cx="100" cy="75" rx="55" ry="45" fill="#3a2818"/>
+                        <!-- Pescoço -->
+                        <rect x="85" y="115" width="30" height="25" fill="#f4c8a0"/>
+                        <!-- Camiseta cinza com Pikachu -->
+                        <path d="M 50 140 Q 50 130 60 130 L 140 130 Q 150 130 150 140 L 160 220 L 40 220 Z" fill="#c8c8c8"/>
+                        <!-- Pikachu na camiseta -->
+                        <circle cx="100" cy="175" r="18" fill="#ffcc00" stroke="#1a1a1a" stroke-width="2"/>
+                        <circle cx="93" cy="172" r="2" fill="#1a1a1a"/>
+                        <circle cx="107" cy="172" r="2" fill="#1a1a1a"/>
+                        <circle cx="88" cy="178" r="2.5" fill="#ff6600" opacity="0.6"/>
+                        <circle cx="112" cy="178" r="2.5" fill="#ff6600" opacity="0.6"/>
+                        <path d="M 95 182 Q 100 186 105 182" stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        <!-- Cabeça -->
+                        <ellipse cx="100" cy="80" rx="42" ry="48" fill="#f4c8a0"/>
+                        <!-- Cabelo da frente (franja) -->
+                        <path d="M 60 60 Q 65 35 100 30 Q 135 35 140 60 Q 135 50 120 55 Q 110 45 100 50 Q 90 45 80 55 Q 65 50 60 60 Z" fill="#3a2818"/>
+                        <path d="M 65 70 Q 70 50 90 55 L 85 80 Q 75 75 65 70 Z" fill="#3a2818"/>
+                        <path d="M 135 70 Q 130 50 110 55 L 115 80 Q 125 75 135 70 Z" fill="#3a2818"/>
+                        <!-- Boné -->
+                        <path d="M 55 55 Q 55 25 100 22 Q 145 25 145 55 L 145 60 L 55 60 Z" fill="#f5f5f5"/>
+                        <ellipse cx="100" cy="62" rx="50" ry="6" fill="#f5f5f5"/>
+                        <path d="M 50 60 Q 100 70 150 60 L 155 68 Q 100 78 45 68 Z" fill="#ffcc00"/>
+                        <text x="100" y="48" font-family="Bangers, cursive" font-size="12" fill="#1a1a1a" text-anchor="middle" font-weight="bold">CB</text>
+                        <!-- Olhos -->
+                        <ellipse cx="85" cy="85" rx="4" ry="5" fill="#1a1a1a"/>
+                        <ellipse cx="115" cy="85" rx="4" ry="5" fill="#1a1a1a"/>
+                        <circle cx="86" cy="84" r="1.2" fill="#fff"/>
+                        <circle cx="116" cy="84" r="1.2" fill="#fff"/>
+                        <!-- Sobrancelhas -->
+                        <path d="M 78 76 Q 85 73 92 76" stroke="#3a2818" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M 108 76 Q 115 73 122 76" stroke="#3a2818" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <!-- Nariz -->
+                        <path d="M 100 88 Q 97 96 100 100 Q 103 96 100 88" fill="#e8b088"/>
+                        <!-- Boca -->
+                        <path d="M 90 108 Q 100 114 110 108" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <!-- Cavanhaque -->
+                        <ellipse cx="100" cy="118" rx="6" ry="3" fill="#3a2818"/>
+                        <!-- Bochechas -->
+                        <circle cx="78" cy="98" r="4" fill="#ff9999" opacity="0.4"/>
+                        <circle cx="122" cy="98" r="4" fill="#ff9999" opacity="0.4"/>
+                    </svg>
+                    <div class="avatar-status">
+                        <span class="status-dot"></span>
+                        <span>ONLINE</span>
                     </div>
                 </div>
-            </div>
+                <h3 class="avatar-name">TIU SAM</h3>
+                <p class="avatar-role">Pokémon TCG Expert</p>
+            </aside>
 
-            <!-- Input Area -->
-            <div class="input-section">
+            <!-- CHAT BOX -->
+            <div class="chat-box">
+                <div class="chat-header">
+                    <div class="chat-header-info">
+                        <span class="chat-title">💬 Chat com o Tiu</span>
+                    </div>
+                </div>
+
+                <div class="messages" id="messages">
+                    <div class="message bot-message">
+                        <div class="message-bubble">
+                            <p>E aí, galera! 👋 É o TiuSam aqui!</p>
+                            <p>Pode mandar sua dúvida sobre Pokémon TCG que eu respondo! Coleções, decks, cartas raras, batalhas... bora! ⚡</p>
+                        </div>
+                    </div>
+                </div>
+
                 <form id="chatForm" class="chat-form">
                     <input
                         type="text"
                         id="userInput"
                         class="input-field"
-                        placeholder="Faça sua pergunta aqui..."
+                        placeholder="Pergunta pro Tiu..."
                         autocomplete="off"
                         disabled
                     >
                     <button type="submit" class="send-btn" id="sendBtn" disabled>
-                        <span class="btn-text">→</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M2 12L22 2L13 22L11 13L2 12Z" fill="currentColor" stroke="currentColor" stroke-linejoin="round"/>
+                        </svg>
                     </button>
                 </form>
-                <p class="loading-text" id="loadingText" style="display: none;">
+                <div class="loading-text" id="loadingText" style="display: none;">
                     <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                </p>
+                </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>TiuSam © 2026 | Powered by Claude AI</p>
-        </footer>
-    </div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>TiuSam © 2026 · Powered by Claude AI ⚡</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>

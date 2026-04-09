@@ -76,7 +76,7 @@ function addMessageToChat(text, sender) {
     messageDiv.className = `message ${sender}-message`;
 
     const contentDiv = document.createElement('div');
-    contentDiv.className = 'message-content';
+    contentDiv.className = 'message-bubble';
 
     // Handle multiline responses
     const paragraphs = text.split('\n').filter(p => p.trim());
