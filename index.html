@@ -3,46 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TiuSam - YouTube Followers Chat</title>
+    <title>TiuSam - Chat IA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-content">
-                <div class="logo-section">
-                    <h1 class="logo-text">TiuSam</h1>
-                    <p class="tagline">Pokemon TCG Expert</p>
-                </div>
-                <p class="description">Pergunte qualquer coisa sobre Pokemon TCG</p>
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="top-bar-content">
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="#ffcc00" stroke-width="3"/>
+                    <circle cx="50" cy="50" r="35" fill="#ff6600" opacity="0.1"/>
+                    <text x="50" y="60" font-size="40" font-weight="bold" text-anchor="middle" fill="#ffcc00">⚡</text>
+                </svg>
+                <span class="top-bar-text">TiuSam - Chat IA</span>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero-content">
+                <svg class="logo-main" viewBox="0 0 500 150" xmlns="http://www.w3.org/2000/svg">
+                    <!-- TiuSam Text with Comic Style -->
+                    <defs>
+                        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#ffcc00;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ff6600;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="shadow">
+                            <feDropShadow dx="3" dy="3" stdDeviation="2" flood-opacity="0.5"/>
+                        </filter>
+                    </defs>
+                    <text x="250" y="110" font-size="90" font-weight="900" text-anchor="middle" fill="url(#textGradient)" filter="url(#shadow)" style="font-family: Arial, sans-serif; letter-spacing: 2px;">TiuSam</text>
+                    <circle cx="480" cy="30" r="15" fill="#ffcc00"/>
+                </svg>
+                <p class="hero-subtitle">Responda qualquer coisa sobre Pokemon TCG 🔥</p>
             </div>
         </header>
 
         <!-- Chat Container -->
         <main class="chat-container">
+            <!-- Messages -->
             <div class="messages" id="messages">
                 <div class="message bot-message">
                     <div class="message-content">
-                        <p>E aí, é o TiuSam aqui! 👋</p>
-                        <p>Quer saber sobre Pokémon TCG? Tô aqui pra responder qualquer dúvida do meu canal. Manda aí!</p>
+                        <p>E aí! 👋 É o TiuSam aqui!</p>
+                        <p>Quer saber sobre Pokémon TCG? Manda sua pergunta que eu respondo!</p>
                     </div>
                 </div>
             </div>
 
             <!-- Input Area -->
-            <div class="input-area">
+            <div class="input-section">
                 <form id="chatForm" class="chat-form">
                     <input
                         type="text"
                         id="userInput"
                         class="input-field"
-                        placeholder="Digite sua pergunta..."
+                        placeholder="Faça sua pergunta aqui..."
                         autocomplete="off"
                         disabled
                     >
                     <button type="submit" class="send-btn" id="sendBtn" disabled>
-                        <span>Enviar</span>
+                        <span class="btn-text">→</span>
                     </button>
                 </form>
                 <p class="loading-text" id="loadingText" style="display: none;">
@@ -53,7 +76,7 @@
 
         <!-- Footer -->
         <footer class="footer">
-            <p>Powered by Claude AI | TiuSam © 2026</p>
+            <p>TiuSam © 2026 | Powered by Claude AI</p>
         </footer>
     </div>
 
