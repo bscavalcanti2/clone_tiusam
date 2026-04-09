@@ -61,11 +61,11 @@
 
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="title-line title-small">PERGUNTE</span>
-                <span class="title-line title-small">AO</span>
-                <span class="title-line title-big">TIU!</span>
+                <span class="title-line title-small">CONVERSE COM O</span>
+                <img src="logo.png" alt="TiuSam" class="title-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                <span class="title-line title-big" style="display:none;">TIUSAM</span>
             </h1>
-            <p class="hero-sub">⚡ Chat com IA treinada pra responder como o TiuSam ⚡</p>
+            <p class="hero-sub">⚡ Chat IA que responde como o Tiu ⚡</p>
         </div>
     </section>
 
@@ -76,47 +76,60 @@
             <aside class="avatar-panel">
                 <div class="avatar-container">
                     <svg class="avatar-svg" viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Cabelo de trás -->
-                        <ellipse cx="100" cy="75" rx="55" ry="45" fill="#3a2818"/>
+                        <!-- Cabelo de trás (mais comprido nas laterais) -->
+                        <ellipse cx="100" cy="85" rx="58" ry="48" fill="#5a3820"/>
+                        <path d="M 45 90 Q 40 130 55 140 L 70 130 Q 60 110 60 90 Z" fill="#5a3820"/>
+                        <path d="M 155 90 Q 160 130 145 140 L 130 130 Q 140 110 140 90 Z" fill="#5a3820"/>
                         <!-- Pescoço -->
-                        <rect x="85" y="115" width="30" height="25" fill="#f4c8a0"/>
+                        <rect x="85" y="120" width="30" height="22" fill="#e8b890"/>
                         <!-- Camiseta cinza com Pikachu -->
-                        <path d="M 50 140 Q 50 130 60 130 L 140 130 Q 150 130 150 140 L 160 220 L 40 220 Z" fill="#c8c8c8"/>
+                        <path d="M 45 142 Q 45 132 58 132 L 142 132 Q 155 132 155 142 L 165 230 L 35 230 Z" fill="#c8c8c8" stroke="#0a0a0a" stroke-width="2"/>
                         <!-- Pikachu na camiseta -->
-                        <circle cx="100" cy="175" r="18" fill="#ffcc00" stroke="#1a1a1a" stroke-width="2"/>
-                        <circle cx="93" cy="172" r="2" fill="#1a1a1a"/>
-                        <circle cx="107" cy="172" r="2" fill="#1a1a1a"/>
-                        <circle cx="88" cy="178" r="2.5" fill="#ff6600" opacity="0.6"/>
-                        <circle cx="112" cy="178" r="2.5" fill="#ff6600" opacity="0.6"/>
-                        <path d="M 95 182 Q 100 186 105 182" stroke="#1a1a1a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        <ellipse cx="100" cy="180" rx="20" ry="18" fill="#ffcc00" stroke="#0a0a0a" stroke-width="2"/>
+                        <path d="M 82 168 L 75 152 L 88 162 Z" fill="#ffcc00" stroke="#0a0a0a" stroke-width="2"/>
+                        <path d="M 118 168 L 125 152 L 112 162 Z" fill="#ffcc00" stroke="#0a0a0a" stroke-width="2"/>
+                        <circle cx="93" cy="178" r="2" fill="#0a0a0a"/>
+                        <circle cx="107" cy="178" r="2" fill="#0a0a0a"/>
+                        <circle cx="87" cy="184" r="2.5" fill="#ff3838"/>
+                        <circle cx="113" cy="184" r="2.5" fill="#ff3838"/>
+                        <path d="M 95 188 Q 100 192 105 188" stroke="#0a0a0a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
                         <!-- Cabeça -->
-                        <ellipse cx="100" cy="80" rx="42" ry="48" fill="#f4c8a0"/>
-                        <!-- Cabelo da frente (franja) -->
-                        <path d="M 60 60 Q 65 35 100 30 Q 135 35 140 60 Q 135 50 120 55 Q 110 45 100 50 Q 90 45 80 55 Q 65 50 60 60 Z" fill="#3a2818"/>
-                        <path d="M 65 70 Q 70 50 90 55 L 85 80 Q 75 75 65 70 Z" fill="#3a2818"/>
-                        <path d="M 135 70 Q 130 50 110 55 L 115 80 Q 125 75 135 70 Z" fill="#3a2818"/>
-                        <!-- Boné -->
-                        <path d="M 55 55 Q 55 25 100 22 Q 145 25 145 55 L 145 60 L 55 60 Z" fill="#f5f5f5"/>
-                        <ellipse cx="100" cy="62" rx="50" ry="6" fill="#f5f5f5"/>
-                        <path d="M 50 60 Q 100 70 150 60 L 155 68 Q 100 78 45 68 Z" fill="#ffcc00"/>
-                        <text x="100" y="48" font-family="Bangers, cursive" font-size="12" fill="#1a1a1a" text-anchor="middle" font-weight="bold">CB</text>
+                        <ellipse cx="100" cy="85" rx="40" ry="46" fill="#e8b890"/>
+                        <!-- Franja saindo do boné -->
+                        <path d="M 62 75 Q 70 88 78 80" fill="#5a3820"/>
+                        <path d="M 138 75 Q 130 88 122 80" fill="#5a3820"/>
+                        <!-- BONÉ Charlie Brown estilo trucker (branco com aba amarela) -->
+                        <!-- Coroa do boné -->
+                        <path d="M 55 70 Q 55 30 100 25 Q 145 30 145 70 Z" fill="#f8f8f8" stroke="#0a0a0a" stroke-width="2"/>
+                        <!-- Linha de costura inferior do boné -->
+                        <path d="M 55 70 Q 100 78 145 70" fill="none" stroke="#dddddd" stroke-width="1.5"/>
+                        <!-- Aba amarela curva -->
+                        <path d="M 48 70 Q 100 92 152 70 Q 155 78 152 82 Q 100 100 48 82 Q 45 78 48 70 Z" fill="#ffcc00" stroke="#0a0a0a" stroke-width="2"/>
+                        <!-- Logo Charlie Brown estilizada (em arco) -->
+                        <path id="bonepath" d="M 70 55 Q 100 38 130 55" fill="none"/>
+                        <text font-family="Bangers, cursive" font-size="11" fill="#0a0a0a" font-weight="bold">
+                            <textPath href="#bonepath" startOffset="50%" text-anchor="middle">Charlie Brown</textPath>
+                        </text>
+                        <!-- Detalhe asa/raio do boné (lado direito) -->
+                        <path d="M 132 50 L 142 45 L 138 52 L 145 50 L 136 58 Z" fill="#ff9500" stroke="#0a0a0a" stroke-width="1"/>
                         <!-- Olhos -->
-                        <ellipse cx="85" cy="85" rx="4" ry="5" fill="#1a1a1a"/>
-                        <ellipse cx="115" cy="85" rx="4" ry="5" fill="#1a1a1a"/>
-                        <circle cx="86" cy="84" r="1.2" fill="#fff"/>
-                        <circle cx="116" cy="84" r="1.2" fill="#fff"/>
+                        <ellipse cx="85" cy="92" rx="3.5" ry="4.5" fill="#0a0a0a"/>
+                        <ellipse cx="115" cy="92" rx="3.5" ry="4.5" fill="#0a0a0a"/>
+                        <circle cx="86" cy="91" r="1.2" fill="#fff"/>
+                        <circle cx="116" cy="91" r="1.2" fill="#fff"/>
                         <!-- Sobrancelhas -->
-                        <path d="M 78 76 Q 85 73 92 76" stroke="#3a2818" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                        <path d="M 108 76 Q 115 73 122 76" stroke="#3a2818" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M 78 84 Q 85 81 92 84" stroke="#5a3820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                        <path d="M 108 84 Q 115 81 122 84" stroke="#5a3820" stroke-width="2.5" fill="none" stroke-linecap="round"/>
                         <!-- Nariz -->
-                        <path d="M 100 88 Q 97 96 100 100 Q 103 96 100 88" fill="#e8b088"/>
+                        <path d="M 100 95 Q 97 104 100 108 Q 103 104 100 95" fill="#d49872"/>
                         <!-- Boca -->
-                        <path d="M 90 108 Q 100 114 110 108" stroke="#1a1a1a" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        <path d="M 90 115 Q 100 121 110 115" stroke="#0a0a0a" stroke-width="2" fill="none" stroke-linecap="round"/>
                         <!-- Cavanhaque -->
-                        <ellipse cx="100" cy="118" rx="6" ry="3" fill="#3a2818"/>
+                        <ellipse cx="100" cy="125" rx="7" ry="3" fill="#5a3820"/>
+                        <path d="M 95 119 L 98 124 L 102 124 L 105 119" fill="#5a3820"/>
                         <!-- Bochechas -->
-                        <circle cx="78" cy="98" r="4" fill="#ff9999" opacity="0.4"/>
-                        <circle cx="122" cy="98" r="4" fill="#ff9999" opacity="0.4"/>
+                        <circle cx="76" cy="105" r="4" fill="#ff9999" opacity="0.4"/>
+                        <circle cx="124" cy="105" r="4" fill="#ff9999" opacity="0.4"/>
                     </svg>
                     <div class="avatar-status">
                         <span class="status-dot"></span>
