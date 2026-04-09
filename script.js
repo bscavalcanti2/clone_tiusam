@@ -73,6 +73,14 @@ chatForm.addEventListener('submit', async (e) => {
     }
 });
 
+// Converte markdown simples pra HTML
+function parseMarkdown(text) {
+    return text
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>')
+        .replace(/`(.+?)`/g, '<code>$1</code>');
+}
+
 // Add message to chat UI
 function addMessageToChat(text, sender) {
     const messageDiv = document.createElement('div');
@@ -85,7 +93,7 @@ function addMessageToChat(text, sender) {
     const paragraphs = text.split('\n').filter(p => p.trim());
     paragraphs.forEach(paragraph => {
         const p = document.createElement('p');
-        p.textContent = paragraph;
+        p.innerHTML = parseMarkdown(paragraph);
         contentDiv.appendChild(p);
     });
 
