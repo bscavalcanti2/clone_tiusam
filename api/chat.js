@@ -11,7 +11,7 @@ const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 // ============================================================
 function loadKnowledge() {
     const knowledgeDir = path.join(process.cwd(), 'knowledge');
-    const files = ['personalidade.md', 'conhecimento-pokemon.md', 'videos.md'];
+    const files = ['personalidade.md', 'conhecimento-pokemon.md', 'meta-atual.md', 'videos.md'];
     const parts = [];
 
     for (const file of files) {
