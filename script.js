@@ -48,18 +48,29 @@ chatForm.addEventListener('submit', async (e) => {
         });
 
         if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
+            const errorData = await response.json();
+            console.error('❌ API error response:', {
+                status: response.status,
+                statusText: response.statusText,
+                data: errorData,
+            });
+            throw new Error(`HTTP ${response.status}: ${errorData.error || response.statusText}`);
         }
 
         const data = await response.json();
+        console.log('✅ API response received:', data);
 
         // Add bot response to chat
         addMessageToChat(data.response, 'bot');
 
     } catch (error) {
-        console.error('Error:', error);
+        console.error('❌ Error details:', {
+            message: error.message,
+            stack: error.stack,
+            error: error,
+        });
         addMessageToChat(
-            'Desculpa, tive um problema aqui! Tenta de novo em um instante.',
+            'Desculpa, tive um problema aqui! Tenta de novo em um instante. (Verifica o console do navegador pra mais detalhes)',
             'bot'
         );
     } finally {
