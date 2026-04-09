@@ -5,8 +5,5 @@
     "api/chat.js": {
       "maxDuration": 30
     }
-  },
-  "env": {
-    "ANTHROPIC_API_KEY": "@anthropic_api_key"
   }
 }
